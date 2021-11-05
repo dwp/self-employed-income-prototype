@@ -1,0 +1,77 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <span class="govuk-caption-l">Report your income and expenses</span>
+          <h1 class="govuk-heading-l">National Insurance contributions</h1>
+
+
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h2 class="govuk-fieldset__heading">
+                        Did you pay any National Insurance to HMRC during the period 20 April 2021 to 19 May 2021?
+                      </h2>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="yes" name="national-insurance" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="yes">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="no" name="national-insurance" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="no">
+                          No
+                        </label>
+                      </div>
+                    </div>
+
+
+                    <div class="govuk-inset-text">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <h1 class="govuk-fieldset__heading">
+                            How much National Insurance did you pay?
+                          </h1>
+                        </legend>
+                        <div class="govuk-hint">
+                          Only include self-employed contributions.
+                        </div>
+                        <div class="govuk-form-group">
+                          <span class="govuk-body govuk-!-font-weight-bold">£</span>
+                          <input class="govuk-input govuk-input--width-4" id="national-insurance-pounds" name="national-insurance-pounds" type="text"
+                          <span class="govuk-body"> .</span>
+                          <input class="govuk-input govuk-input--width-2" id="national-insurance-pence" name="national-insurance-pence" type="text">
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <br>
+
+
+            <button type="submit" class="govuk-button">
+              Next
+            </button>
+            <br>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+    </main>
+  </div>
+  {% endblock %}

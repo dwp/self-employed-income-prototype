@@ -1,0 +1,124 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <span class="govuk-caption-l">Report your income and expenses</span>
+          <h1 class="govuk-heading-l">Income</h1>
+
+
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h2 class="govuk-fieldset__heading">
+                        Were you paid any money by the HMRC coronavirus Self-Employment Income Support Scheme during the peroiod 20 April 2021 to 19 May 2021?
+                      </h2>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="yes" name="coronavirus" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="yes">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="no" name="coronavirus" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="no">
+                          No
+                        </label>
+                      </div>
+                    </div>
+
+
+                    <div class="govuk-inset-text">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <h1 class="govuk-fieldset__heading">
+                            How much money were you paid by the scheme during this period?
+                          </h1>
+                        </legend>
+                        <div class="govuk-hint">
+                          Only include money paid to you between these dates. Tell us the amount before you paid things like expenses and tax.
+                        </div>
+                        <div class="govuk-form-group">
+                          <span class="govuk-body govuk-!-font-weight-bold">£</span>
+                          <input class="govuk-input govuk-input--width-4" id="coronavirus-pounds" name="coronavirus-pounds" type="text"
+                          <span class="govuk-body"> .</span>
+                          <input class="govuk-input govuk-input--width-2" id="coronavirus-pence" name="coronavirus-pence" type="text">
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <br>
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <h2 class="govuk-fieldset__heading">
+                            Did you receive any  other income from self-employment during the period 20 April 2021 to 9 May 2021?
+                          </h2>
+                        </legend>
+                        <div class="govuk-radios govuk-radios--inline">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="no" name="income" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="no">
+                              Yes
+                            </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="no" name="income" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="no">
+                              No
+                            </label>
+                          </div>
+                        </div>
+
+
+                        <div class="govuk-inset-text">
+                          <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                              <h1 class="govuk-fieldset__heading">
+                                How much did you receive?
+                              </h1>
+                            </legend>
+                            <div class="govuk-hint">
+                              Include payment made by cash, cheque, card, bank transfer or made online, for example Paypal.
+                            </div>
+                            <div class="govuk-form-group">
+                              <span class="govuk-body govuk-!-font-weight-bold">£</span>
+                              <input class="govuk-input govuk-input--width-4" id="income-pounds" name="income-pounds" type="text"
+                              <span class="govuk-body"> .</span>
+                              <input class="govuk-input govuk-input--width-2" id="income-pence" name="income-pence" type="text">
+                            </div>
+                          </fieldset>
+                        </div>
+
+                  </fieldset>
+                </div>
+
+
+
+
+            <button type="submit" class="govuk-button">
+              Next
+            </button>
+            <br>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+    </main>
+  </div>
+  {% endblock %}

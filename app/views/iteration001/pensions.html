@@ -1,0 +1,74 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <span class="govuk-caption-l">Report your income and expenses</span>
+          <h1 class="govuk-heading-l">Pensions</h1>
+
+
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h2 class="govuk-fieldset__heading">
+                        Did you pay into a pension during the period 20 April 2021 to 19 May 2021?
+                      </h2>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="yes" name="pensions" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="yes">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="no" name="pensions" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="no">
+                          No
+                        </label>
+                      </div>
+                    </div>
+
+
+                    <div class="govuk-inset-text">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                          <h1 class="govuk-fieldset__heading">
+                            How much did you pay?
+                          </h1>
+                        </legend>
+                        <div class="govuk-form-group">
+                          <span class="govuk-body govuk-!-font-weight-bold">£</span>
+                          <input class="govuk-input govuk-input--width-4" id="pensions-pounds" name="pensions-pounds" type="text"
+                          <span class="govuk-body"> .</span>
+                          <input class="govuk-input govuk-input--width-2" id="pensions-pence" name="pensions-pence" type="text">
+                        </div>
+                      </fieldset>
+                    </div>
+
+                    <br>
+
+
+            <button type="submit" class="govuk-button">
+              Next
+            </button>
+            <br>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+    </main>
+  </div>
+  {% endblock %}
