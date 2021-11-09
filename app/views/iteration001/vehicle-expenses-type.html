@@ -18,20 +18,26 @@
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                       <h2 class="govuk-fieldset__heading">
-                        Did you use a vehicle for business the period 20 April 2021 to 19 May 2021?
+                        How do you want to report your vehicle expenses for the period 20 April 2021 to 19 May 2021?
                       </h2>
+                      <div class="govuk-hint">
+                        The flat rate is charged at 24 pence per mile. It covers fuel, insurance and anything else you've spent on your vehicle.
+                      </div>
+                      <div class="govuk-hint">
+                        If you report actual costs, you'll need to add up what you've spent.
+                      </div>
                     </legend>
-                    <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="yes" name="vehicle-expenses" type="radio" value="yes">
-                        <label class="govuk-label govuk-radios__label" for="yes">
-                          Yes
+                        <input class="govuk-radios__input" id="flat-rate" name="vehicle-expenses-type" type="radio" value="flat-rate">
+                        <label class="govuk-label govuk-radios__label" for="flat-rate">
+                          I want to use the flat rate
                         </label>
                       </div>
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="no" name="vehicle-expenses" type="radio" value="no">
-                        <label class="govuk-label govuk-radios__label" for="no">
-                          No
+                        <input class="govuk-radios__input" id="actual-costs" name="vehicle-expenses-type" type="radio" value="actual-costs">
+                        <label class="govuk-label govuk-radios__label" for="actual-costs">
+                          I want to report actual costs
                         </label>
                       </div>
                     </div>

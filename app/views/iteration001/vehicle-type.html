@@ -1,0 +1,70 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+
+<div class="govuk-width-container">
+  {{ govukBackLink({ text: 'Back', href: 'javascript:history.back()' }) }}
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+          <!--start of radio-->
+          <span class="govuk-caption-l">Report your income and expenses</span>
+          <h1 class="govuk-heading-l">Vehicle expenses</h1>
+          <br>
+
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h2 class="govuk-fieldset__heading">
+                        What type of vehicle was it?
+                      </h2>
+                    </legend>
+                    <div class="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="business-vehicle" name="vehicle-type" type="radio" value="business-vehicle">
+                        <label class="govuk-label govuk-radios__label" for="business-vehicle">
+                          Black cab, van or oter vehicle designated for business use
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="taxi" name="vehicle-type" type="radio" value="taxi">
+                        <label class="govuk-label govuk-radios__label" for="taxi">
+                          Minicab or taxi service, for example Uber
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="car" name="vehicle-type" type="radio" value="car">
+                        <label class="govuk-label govuk-radios__label" for="car">
+                          Car
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="motorbike" name="vehicle-type" type="radio" value="motorbike">
+                        <label class="govuk-label govuk-radios__label" for="motorbike">
+                          Motorbike or scooter
+                        </label>
+                      </div>
+                    </div>
+
+
+                    <br>
+
+
+            <button type="submit" class="govuk-button">
+              Next
+            </button>
+            <br>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+    </main>
+  </div>
+  {% endblock %}
