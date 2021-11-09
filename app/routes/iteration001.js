@@ -46,5 +46,58 @@ router.post('/iteration001/pensions', (req, res) => {
 ;
 
 
+// vehicle-expenses
+
+router.post('/iteration001/vehicle-expenses', function(req, res) {
+  if (req.body['vehicle-expenses'] === 'yes') {
+    res.redirect('vehicle-type');
+  } if (req.body['vehicle-expenses'] === 'no') {
+    res.redirect('other-expenses');
+  }
+});
+
+
+// vehicle-type
+
+router.post('/iteration001/vehicle-type', function(req, res) {
+  if (req.body['vehicle-type'] === 'business-vehicle') {
+    res.redirect('vehicle-expenses-type');
+  } if (req.body['vehicle-type'] === 'taxi') {
+    res.redirect('vehicle-flat-rate');
+  } if (req.body['vehicle-type'] === 'car') {
+    res.redirect('vehicle-flat-rate');
+  } if (req.body['vehicle-type'] === 'motorbike') {
+    res.redirect('vehicle-expenses-type');
+  }
+});
+
+
+// vehicle-expenses-type
+
+router.post('/iteration001/vehicle-expenses-type', function(req, res) {
+  if (req.body['vehicle-expenses-type'] === 'flat-rate') {
+    res.redirect('vehicle-flat-rate');
+  } if (req.body['vehicle-expenses-type'] === 'actual-costs') {
+    res.redirect('vehicle-actual-costs');
+  }
+});
+
+
+// vehicle-flat-rate
+
+router.post('/iteration001/vehicle-flat-rate', (req, res) => {
+  res.redirect('/iteration001/other-expenses')
+})
+;
+
+
+// pensions
+
+router.post('/iteration001/vehicle-actual-costs', (req, res) => {
+  res.redirect('/iteration001/other-expenses')
+})
+;
+
+
 
 module.exports = router
