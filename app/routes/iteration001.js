@@ -91,13 +91,20 @@ router.post('/iteration001/vehicle-flat-rate', (req, res) => {
 ;
 
 
-// pensions
+// vehicle-actual-costs
 
 router.post('/iteration001/vehicle-actual-costs', (req, res) => {
   res.redirect('/iteration001/other-expenses')
 })
 ;
 
+
+// other-expenses
+
+router.post('/iteration001/other-expenses', (req, res) => {
+  res.redirect('/iteration001/check-answers')
+})
+;
 
 
 module.exports = router
