@@ -10,7 +10,6 @@ router.use((req, res, next) => {
 })
 
 
-
 // ROUTES FOR THE ITERATION 1
 
 
@@ -53,6 +52,8 @@ router.post('/iteration001/vehicle-expenses', function(req, res) {
     res.redirect('vehicle-type');
   } if (req.body['vehicle-expenses'] === 'no') {
     res.redirect('other-expenses');
+  } else {
+    res.redirect('other-expenses');
   }
 });
 
@@ -68,6 +69,8 @@ router.post('/iteration001/vehicle-type', function(req, res) {
     res.redirect('vehicle-flat-rate');
   } if (req.body['vehicle-type'] === 'motorbike') {
     res.redirect('vehicle-expenses-type');
+  } else {
+    res.redirect('vehicle-expenses-type');
   }
 });
 
@@ -79,6 +82,8 @@ router.post('/iteration001/vehicle-expenses-type', function(req, res) {
     res.redirect('vehicle-flat-rate');
   } if (req.body['vehicle-expenses-type'] === 'actual-costs') {
     res.redirect('vehicle-actual-costs');
+  } else {
+    res.redirect('vehicle-flat-rate');
   }
 });
 
@@ -102,7 +107,7 @@ router.post('/iteration001/vehicle-actual-costs', (req, res) => {
 // other-expenses
 
 router.post('/iteration001/other-expenses', (req, res) => {
-  res.redirect('/iteration001/check-answers')
+  res.redirect('/iteration001/check-answers-profit')
 })
 ;
 
