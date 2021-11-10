@@ -1,0 +1,169 @@
+{% extends "layout.html" %} {% block pageTitle %} GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+<a class="govuk-button govuk-button--secondary" href="check-answers-loss">
+  Toggle Profit / Loss
+</a>
+
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form method="post" novalidate>
+
+          <span class="govuk-caption-l">Report your income and expenses</span>
+          <h1 class="govuk-heading-l">Check your answers</h1>
+          <br>
+
+          <h2 class="govuk-heading-m">Money in</h2>
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-three-quarters">
+                Income
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £10000.00
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> income</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-three-quarters">
+                Self-employment Income Support Scheme
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £100.00
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> Self-Employment Income Support Scheme</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-m">Money out</h2>
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-three-quarters">
+                National Insurance
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £100.00
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> National Insurance</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-three-quarters">
+                Tax
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £100.00
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> tax</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-three-quarters">
+                Pensions
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £10.00
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> pensions</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key govuk-!-width-three-quarters">
+                Vehicle expenses
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £100.00
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> vehicle expenses</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Other expenses
+              </dt>
+              <dd class="govuk-summary-list__value">
+                £100.00
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> other expenses</span>
+                </a>
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                What did you include as other expenses?
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Staff wages, property costs, stock, stationary, printing, power and utilities, insurance, operating licences.
+              </dd>
+              <dd class="govuk-summary-list__actions">
+                <a class="govuk-link" href="#">
+                  Change<span class="govuk-visually-hidden"> what you included as other expenses</span>
+                </a>
+              </dd>
+            </div>
+          </dl>
+
+          <h2 class="govuk-heading-s">Balance</h2>
+          <p class="govuk-heading-l">£9690.00</p>
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+                I declare that the information I have given is correct and complete.
+                I understand that if I fail to promptly report changes in my circustances which I know will affect my entitlement to universal credit I may be liable to prosecution or have some other financial sanction taken against me.
+            </strong>
+          </div>
+
+          <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset"">
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                  I agree that these details are correct
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
